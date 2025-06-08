@@ -3,7 +3,7 @@ local RunService = game:GetService("RunService")
 local Camera = workspace.CurrentCamera
 local LocalPlayer = Players.LocalPlayer
 
-local ESP = {
+ESP = ESP or {
     Enabled = true,
     ShowBoxes = true,
     ShowNames = true,
@@ -34,10 +34,10 @@ end
 
 local function createESPElements()
     return {
-        Box = newDrawing("Square", {Visible = false, Thickness = 2, Filled = false, Color = Color3.new(1, 1, 1)}),
-        Name = newDrawing("Text", {Visible = false, Center = true, Outline = true, Size = 16, Font = 2, Color = Color3.new(1, 1, 1)}),
-        Tracer = newDrawing("Line", {Visible = false, Thickness = 1, Color = Color3.new(1, 1, 1)}),
-        HealthBar = newDrawing("Line", {Visible = false, Thickness = 4, Color = Color3.new(0, 1, 0)})
+        Box = newDrawing("Square", {Visible = false, Thickness = 2, Filled = false, Color = Color3.new(1,1,1)}),
+        Name = newDrawing("Text", {Visible = false, Center = true, Outline = true, Size = 16, Font = 2, Color = Color3.new(1,1,1)}),
+        Tracer = newDrawing("Line", {Visible = false, Thickness = 1, Color = Color3.new(1,1,1)}),
+        HealthBar = newDrawing("Line", {Visible = false, Thickness = 4, Color = Color3.new(0,1,0)})
     }
 end
 
@@ -54,10 +54,10 @@ local function getBoxScreenPoints(cframe, size)
     local half = size / 2
     local points = {}
     local visible = true
-    for x = -1, 1, 2 do
-        for y = -1, 1, 2 do
-            for z = -1, 1, 2 do
-                local corner = cframe * Vector3.new(half.X * x, half.Y * y, half.Z * z)
+    for x = -1,1,2 do
+        for y = -1,1,2 do
+            for z = -1,1,2 do
+                local corner = cframe * Vector3.new(half.X*x, half.Y*y, half.Z*z)
                 local screenPos, onScreen = Camera:WorldToViewportPoint(corner)
                 if not onScreen then visible = false end
                 table.insert(points, Vector2.new(screenPos.X, screenPos.Y))
@@ -127,7 +127,7 @@ RunService.RenderStepped:Connect(function()
                         if ESP.ShowNames then
                             data.Name.Visible = true
                             data.Name.Text = player.Name
-                            data.Name.Position = Vector2.new(slimX + slimWidth / 2, minY - 20)
+                            data.Name.Position = Vector2.new(slimX + slimWidth/2, minY - 20)
                             data.Name.Color = baseColor
                         else
                             data.Name.Visible = false
@@ -136,7 +136,7 @@ RunService.RenderStepped:Connect(function()
                         if ESP.ShowTracers then
                             data.Tracer.Visible = true
                             data.Tracer.From = screenCenter
-                            data.Tracer.To = Vector2.new(slimX + slimWidth / 2, maxY)
+                            data.Tracer.To = Vector2.new(slimX + slimWidth/2, maxY)
                             data.Tracer.Color = baseColor
                         else
                             data.Tracer.Visible = false
