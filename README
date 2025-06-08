@@ -1,132 +1,57 @@
-9# 🌌 Vabrint ESP Library
-
-A lightweight and fully customizable ESP library for Roblox.
-
-Created by:
-
-- 🎥 [Mrpopcat14](https://www.youtube.com/@mrpopcat14)
-- 🕹️ Discord: `91yd`
-
----
-
-## 🚀 Loadstring
-
-```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Rx1m/Vabrint-Library/refs/heads/main/Loader.lua"))()
-```
-
-Once loaded, it exposes the global `ESP` table.
-
----
-
-## ⚙️ Customization Options
-
-Below are all customization options with separate code blocks for easy copy-paste.
-
----
-
-### 🎨 Box Color
-
-- Default: RGB rainbow
-- To use a static color:
-
-```lua
-ESP:SetColor(Color3.fromRGB(255, 0, 0)) -- Red
-```
-
----
-
-### 🧊 Box Toggle
-
-```lua
-ESP:SetShowBoxes(true) -- enable
-ESP:SetShowBoxes(false) -- disable
-```
-
----
-
-### 🏷️ Name Display
-
-```lua
-ESP:SetShowNames(true) -- enable name tags
-ESP:SetShowNames(false)
-```
-
----
-
-### 🧭 Tracers
-
-```lua
-ESP:SetShowTracers(true)
-ESP:SetShowTracers(false)
-```
-
----
-
-### ❤️ Health Bar
-
-```lua
-ESP:SetShowHealth(true) -- enable
-ESP:SetShowHealth(false)
-```
-
----
-
-### 🩸 Health Bar Style
-
-**Match ESP color:**
-
-```lua
-ESP:SetHealthColorMode("match")
-```
-
-**Custom color (based on percentage):**
-
-```lua
-ESP:SetHealthColorMode("custom")
-ESP:SetHealthColorFunction(function(healthPercent)
-    if healthPercent > 0.7 then
-        return Color3.fromRGB(0, 255, 0) -- green
-    elseif healthPercent > 0.3 then
-        return Color3.fromRGB(255, 165, 0) -- orange
-    else
-        return Color3.fromRGB(255, 0, 0) -- red
-    end
-end)
-```
-
----
-
-### ✅ Enable ESP
-
-```lua
-ESP:Enable()
-```
-
-### ❌ Disable ESP
-
-```lua
-ESP:Disable()
-```
-
----
-
-## 📦 File Structure
-
-```
-esp.lua           <- Main ESP source code
-README.md         <- Documentation (this file)
-```
-
----
-
-## 📜 License
-
-MIT License - Free to use with credit.
-
----
-
-## 🔗 Credits
-
-- Made by **mrpopcat14** — [YouTube Channel](https://www.youtube.com/@mrpopcat14)
-- Discord Contact: `91yd`
+┌──────────────────────────────────────────────────────────┐
+│                   VIBRANT ESP LIBRARY                    │
+│                     (Development Preview)                │
+├──────────────────────────────────────────────────────────┤
+│                                                          │
+│  📦 INSTALLATION:                                        │
+│  ```lua                                                 │
+│  -- Loads the Vibrant Library from GitHub               │
+│  loadstring(game:HttpGet("https://raw.githubusercontent.│
+│  com/Rx1m/Vabrint-Library/main/Loader.lua"))()          │
+│  ```                                                    │
+│                                                         │
+│  🛠️ CONFIGURATION OPTIONS:                              │
+│  ```lua                                                 │
+│  -- Toggles all ESP features (true/false)               │
+│  ESP.Enabled = true                                     │
+│                                                        │
+│  -- Draws 3D hitboxes around players                   │
+│  ESP.ShowBoxes = true                                 │
+│                                                        │
+│  -- Displays Roblox usernames above heads              │
+│  ESP.ShowNames = true                                  │
+│                                                        │
+│  -- Draws lines from screen bottom to players          │
+│  ESP.ShowTracers = true                               │
+│                                                        │
+│  -- Shows health bars (green/orange/red)               │
+│  ESP.ShowHealth = true                                 │
+│                                                        │
+│  -- Default ESP color (RGB format)                     │
+│  ESP.Color = Color3.fromRGB(255, 0, 0)                │
+│                                                        │
+│  -- Health coloring mode ("match" or "custom")      │
+│  ESP.HealthColorMode = "match"                       │
+│                                                        │
+│  -- Dynamic health coloring function:                  │
+│  -- p = health percentage (0.0-1.0)                   │
+│  ESP.HealthColorFunction = function(p)                │
+│      if p > 0.7 then                                  │
+│          return Color3.fromRGB(0,255,0)   -- Healthy │
+│      elseif p > 0.3 then                              │
+│          return Color3.fromRGB(255,165,0) -- Caution  │
+│      else                                             │
+│          return Color3.fromRGB(255,0,0)   -- Critical │
+│      end                                              │
+│  end.                                                 |
+│                                                       |
+│  ```                                                  │
+│  👥 CREDITS:                                          │
+│  - Vibrant Library: Rx1m                             │
+│  - YouTube: MrPopCat14                              │
+│  - Discord: 91yd | Server: discord.gg/EvjjpjaSMJ    │
+│                                                      │
+│  ⚠️ WARNING: This development version is unstable     │
+│     and may contain bugs. Use at your own risk.      │
+│                                                      │
+└──────────────────────────────────────────────────────┘
