@@ -1,0 +1,132 @@
+# 🌌 Vabrint ESP Library
+
+A lightweight and fully customizable ESP library for Roblox.
+
+Created by:
+
+- 🎥 [Mrpopcat14](https://www.youtube.com/@mrpopcat14)
+- 🕹️ Discord: `91yd`
+
+---
+
+## 🚀 Loadstring
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/main/esp.lua"))()
+```
+
+Once loaded, it exposes the global `ESP` table.
+
+---
+
+## ⚙️ Customization Options
+
+Below are all customization options with separate code blocks for easy copy-paste.
+
+---
+
+### 🎨 Box Color
+
+- Default: RGB rainbow
+- To use a static color:
+
+```lua
+ESP:SetColor(Color3.fromRGB(255, 0, 0)) -- Red
+```
+
+---
+
+### 🧊 Box Toggle
+
+```lua
+ESP:SetShowBoxes(true) -- enable
+ESP:SetShowBoxes(false) -- disable
+```
+
+---
+
+### 🏷️ Name Display
+
+```lua
+ESP:SetShowNames(true) -- enable name tags
+ESP:SetShowNames(false)
+```
+
+---
+
+### 🧭 Tracers
+
+```lua
+ESP:SetShowTracers(true)
+ESP:SetShowTracers(false)
+```
+
+---
+
+### ❤️ Health Bar
+
+```lua
+ESP:SetShowHealth(true) -- enable
+ESP:SetShowHealth(false)
+```
+
+---
+
+### 🩸 Health Bar Style
+
+**Match ESP color:**
+
+```lua
+ESP:SetHealthColorMode("match")
+```
+
+**Custom color (based on percentage):**
+
+```lua
+ESP:SetHealthColorMode("custom")
+ESP:SetHealthColorFunction(function(healthPercent)
+    if healthPercent > 0.7 then
+        return Color3.fromRGB(0, 255, 0) -- green
+    elseif healthPercent > 0.3 then
+        return Color3.fromRGB(255, 165, 0) -- orange
+    else
+        return Color3.fromRGB(255, 0, 0) -- red
+    end
+end)
+```
+
+---
+
+### ✅ Enable ESP
+
+```lua
+ESP:Enable()
+```
+
+### ❌ Disable ESP
+
+```lua
+ESP:Disable()
+```
+
+---
+
+## 📦 File Structure
+
+```
+esp.lua           <- Main ESP source code
+README.md         <- Documentation (this file)
+```
+
+---
+
+## 📜 License
+
+MIT License - Free to use with credit.
+
+---
+
+## 🔗 Credits
+
+- Made by **mrpopcat14** — [YouTube Channel](https://www.youtube.com/@mrpopcat14)
+- Discord Contact: `91yd`
