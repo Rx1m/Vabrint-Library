@@ -12,7 +12,7 @@ Created by:
 ## 🚀 Loadstring
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/R1xm/Vabrint-Library/main/Loader.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Rx1m/Vabrint-Library/refs/heads/main/Loader.lua"))()
 ```
 
 Once loaded, it exposes the global `ESP` table.
