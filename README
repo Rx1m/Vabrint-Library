@@ -4,56 +4,56 @@
 ├──────────────────────────────────────────────────────────┤
 │                                                          │
 │  📦 INSTALLATION:                                        │
-│  ```lua                                                 │
-│  -- Loads the Vibrant Library from GitHub               │
+│                                                          │
+│   #  Loads the Vibrant Library from GitHub               │
 │  loadstring(game:HttpGet("https://raw.githubusercontent.│
 │  com/Rx1m/Vabrint-Library/main/Loader.lua"))()          │
-│  ```                                                    │
+│                                                         │
 │                                                         │
 │  🛠️ CONFIGURATION OPTIONS:                              │
-│  ```lua                                                 │
-│  -- Toggles all ESP features (true/false)               │
+│                                                         │
+│  # Toggles all ESP features (true/false)                │
 │  ESP.Enabled = true                                     │
 │                                                        │
-│  -- Draws 3D hitboxes around players                   │
+│  # Draws 3D hitboxes around players                    │
 │  ESP.ShowBoxes = true                                 │
 │                                                        │
-│  -- Displays Roblox usernames above heads              │
+│  # Displays Roblox usernames above heads               │
 │  ESP.ShowNames = true                                  │
 │                                                        │
-│  -- Draws lines from screen bottom to players          │
+│  # Draws lines from screen bottom to players           │
 │  ESP.ShowTracers = true                               │
 │                                                        │
-│  -- Shows health bars (green/orange/red)               │
+│  # Shows health bars (green/orange/red)                │
 │  ESP.ShowHealth = true                                 │
 │                                                        │
-│  -- Default ESP color (RGB format)                     │
+│  # Default ESP color (RGB format)                      │
 │  ESP.Color = Color3.fromRGB(255, 0, 0)                │
 │                                                        │
-│  -- Health coloring mode ("match" or "custom")      │
+│  # Health coloring mode ("match" or "custom")          │
 │  ESP.HealthColorMode = "match"                       │
 │                                                        │
-│  -- Dynamic health coloring function:                  │
-│  -- p = health percentage (0.0-1.0)                   │
+│  # Dynamic health coloring function:                   │
+│  # p = health percentage (0.0-1.0)                    │
 │  ESP.HealthColorFunction = function(p)                │
 │      if p > 0.7 then                                  │
-│          return Color3.fromRGB(0,255,0)   -- Healthy │
+│          return Color3.fromRGB(0,255,0)   # Healthy   │
 │      elseif p > 0.3 then                              │
-│          return Color3.fromRGB(255,165,0) -- Caution  │
+│          return Color3.fromRGB(255,165,0) # Caution   │
 │      else                                             │
-│          return Color3.fromRGB(255,0,0)   -- Critical │
+│          return Color3.fromRGB(255,0,0)   # Critical  │
 │      end                                              │
-│  end.                                                 |
-│                                                       |
-│  ```                                                  │
+│  end                                                  │
+│                                                       │
 │  👥 CREDITS:                                          │
-│  - Vibrant Library: Rx1m                             │
-│  - YouTube: MrPopCat14                              │
-│  - Discord: 91yd | Server: discord.gg/EvjjpjaSMJ    │
+│  # Vibrant Library: Rx1m                              │
+│  # YouTube: MrPopCat14                               │
+│  # Discord: 91yd | Server: discord.gg/EvjjpjaSMJ     │
 │                                                      │
 │  ⚠️ WARNING: This development version is unstable     │
-│     and may contain bugs. Use at your own risk.       |
-│      bonus tip: if you arent sure how to set a config. |
-│ execute the main loader with the already.              |
-built in config (best)                                   |
+│     and may contain bugs. Use at your own risk.       │
+│                                                      │
+│  # Bonus tip: If you aren't sure how to set a config, │
+│  # execute the main loader with the built-in defaults  │
+│                                                      │
 └──────────────────────────────────────────────────────┘
